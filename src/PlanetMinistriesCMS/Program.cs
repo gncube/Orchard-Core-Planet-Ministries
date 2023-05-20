@@ -14,8 +14,7 @@ builder.Services
 // // Orchard Specific Pipeline
 // .ConfigureServices( services => {
 // })
-// .Configure( (app, routes, services) => {
-// })
+// .Configure( (app, routes, services) => { })
 ;
 
 var app = builder.Build();
