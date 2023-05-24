@@ -5,6 +5,18 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetMinistriesCMS", "src\PlanetMinistriesCMS\PlanetMinistriesCMS.csproj", "{C088D1D1-45B7-4807-B7FF-F6F442610236}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{47897932-AAE8-441D-8CE6-74252F0EE39F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetMinistriesTheme", "src\Themes\PlanetMinistriesTheme\PlanetMinistriesTheme.csproj", "{BBEC21C9-0C75-4801-A01C-4799838DC4AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{6F98914F-9FD3-4801-B841-CFB322FBF31D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Setup.txt = Setup.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSN.PlanetMinistries.Theme", "src\Themes\GSN.PlanetMinistries.Theme\GSN.PlanetMinistries.Theme.csproj", "{31632857-BFA1-4FED-80D2-A60E93531F49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,21 @@ Global
 		{C088D1D1-45B7-4807-B7FF-F6F442610236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C088D1D1-45B7-4807-B7FF-F6F442610236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C088D1D1-45B7-4807-B7FF-F6F442610236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEC21C9-0C75-4801-A01C-4799838DC4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEC21C9-0C75-4801-A01C-4799838DC4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEC21C9-0C75-4801-A01C-4799838DC4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEC21C9-0C75-4801-A01C-4799838DC4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31632857-BFA1-4FED-80D2-A60E93531F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31632857-BFA1-4FED-80D2-A60E93531F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31632857-BFA1-4FED-80D2-A60E93531F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31632857-BFA1-4FED-80D2-A60E93531F49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBEC21C9-0C75-4801-A01C-4799838DC4AB} = {47897932-AAE8-441D-8CE6-74252F0EE39F}
+		{31632857-BFA1-4FED-80D2-A60E93531F49} = {47897932-AAE8-441D-8CE6-74252F0EE39F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDACE69C-E876-4791-9EF1-BB1471C8B8D7}
