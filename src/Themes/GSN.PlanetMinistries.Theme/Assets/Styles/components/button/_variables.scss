@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #BUTTON/VARIABLES
+   ========================================================================== */
+
+:root {
+    --buttonBorderRadius: var(--borderRadius);
+    --buttonBorderThickness: var(--borderWidth);
+    --buttonDisabledOpacity: 0.3;
+    --buttonFontSize: var(--fontSizeBase);
+    --buttonFontWeight: normal;
+    --buttonLineHeight: var(--lineHeightDefault);
+    --buttonPaddingHorizontal: var(--spacingLarge);
+    --buttonPaddingVertical: var(--spacingDefault);
+    --buttonTextTransform: none;
+}

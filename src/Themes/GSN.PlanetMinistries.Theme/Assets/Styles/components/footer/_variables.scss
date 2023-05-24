@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #FOOTER/VARIABLES
+   ========================================================================== */
+
+:root {
+    --footerBackgroundColor: transparent;
+    --footerBackgroundPattern: none;
+    --footerColorInverted: var(--colorTextInverted);
+    --footerColorInvertedActive: var(--colorPrimary);
+    --footerFontSize: var(--fontSizeSmall);
+    --footerHeadingFontSize: var(--fontSizeBase);
+
+    --footerContentPaddingBottom: 3rem;
+    --footerContentPaddingTop: 3rem;
+
+    --footerPaddingVertical: 8rem;
+}

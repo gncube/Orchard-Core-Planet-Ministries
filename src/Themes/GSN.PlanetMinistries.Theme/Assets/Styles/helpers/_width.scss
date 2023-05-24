@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #WIDTH
+   ========================================================================== */
+
+/*
+ * Classes to control width of element.
+ */
+
+@use "sass:math";
+
+/*
+ * Classes to control width of element.
+ */
+
+.width--100 {
+    width: 100%;
+}
+
+@each $width in $widths {
+    .width--#{math.floor($width)} {
+        width: 100%;
+
+        @include mq($from: desktopSmall) {
+            width: #{math.percentage(math.div($width, 100))};
+        }
+    }
+}

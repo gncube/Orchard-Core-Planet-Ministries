@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #BREAKPOINTS
+   ========================================================================== */
+
+/*
+ * Media query breakpoints used by sass-mq.
+ */
+
+$breakpoints: (
+    mobileSmall: 320px,
+    mobile: 375px,
+    mobileLarge: 425px,
+    tabletSmall: 600px,
+    tablet: 768px,
+    desktopSmall: 1024px,
+    desktop: 1280px,
+    desktopMedium: 1440px,
+    desktopLarge: 1920px,
+    desktopHuge: 2200px,
+);

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #GALLERY/DEFAULT
+   ========================================================================== */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc((var(--galleryGutter) / 2) * -1);
+    margin-right: calc((var(--galleryGutter) / 2) * -1);
+
+    &__item {
+        border-left: calc(var(--galleryGutter) / 2) solid transparent;
+        border-right: calc(var(--galleryGutter) / 2) solid transparent;
+        flex-basis: 100%;
+        margin-bottom: var(--galleryGutter);
+        position: relative;
+
+        &-link {
+            border-radius: var(--galleryBorderRadius);
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+
+            cursor: zoom-in;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #LINK/VARIABLES
+   ========================================================================== */
+
+/*
+ * Global link variables, used by other components as well as this one, are 
+ * defined in variables/_link.scss
+ */
+
+:root {
+    --linkEmphasisFontWeight: var(--fontWeightBold);
+    --linkEmphasisTextTransform: uppercase;
+    --linkUnderlineHeight: var(--borderWidth);
+    --linkUnderlineSlideTransformDistance: 1rem;
+}

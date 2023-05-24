@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #TILES/DEFAULT
+   ========================================================================== */
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--tilesGap) * -1) var(--spacingDefault);
+}
+
+.tiles__item {
+    border: var(--tilesGap) solid transparent;
+    position: relative;
+    flex-basis: 50%;
+}
+
+/*
+ * 1. Using `margin-top` to make the height of the tile the same
+ *    size as the width.
+ */
+
+.tiles__item-skeleton {
+    margin-top: 100%; /* 1. */
+}
+
+.tiles__item-children {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    padding: var(--tilesPadding);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: var(--tilesBackgroundColor);
+    background-image: var(--tilesBackgroundPattern);
+}

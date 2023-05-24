@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #NAV/PRIMARY
+   ========================================================================== */
+
+.nav--primary {
+    .nav__item .link,
+    .nav__item-link--default {
+        @include mq($from: tablet) {
+            padding: var(--navPrimaryAnchorPaddingDesktop);
+        }
+    }
+
+    .nav__sub {
+        background-color: var(--headerBackgroundColor);
+        background-image: var(--headerBackgroundPattern);
+    }
+}

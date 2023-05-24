@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #SELECT
+   ========================================================================== */
+
+select {
+    border: var(--formFieldBorderWidth) solid var(--colorTextLight);
+    display: block;
+    padding: var(--formFieldPaddingVertical) var(--formFieldPaddingHorizontal);
+    width: auto;
+
+    background: var(--formFieldBackgroundColor);
+    color: var(--formFieldTextColor);
+
+    .inverted & {
+        border-color: var(--formFieldBorderColorInverted);
+        background: var(--formFieldBackgroundColorInverted);
+        color: var(--formFieldTextColorInverted);
+    }
+
+    &:focus {
+        @extend %focus-form-element;
+    }
+}

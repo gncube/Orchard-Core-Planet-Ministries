@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #VARIABLES
+   ========================================================================== */
+
+/*
+ * Place any values in variables file to avoid magic values.
+ * https://stackoverflow.com/questions/47882/what-is-a-magic-number-and-why-is-it-bad
+ */
+
+// breakpoints should be first as variables may change based on breakpoint
+@import "breakpoints";
+
+@import "animation";
+@import "border";
+@import "colour";
+@import "content-width";
+@import "form";
+@import "gutter";
+@import "link";
+@import "scrollbar";
+@import "spacing";
+@import "table";
+@import "typography";
+@import "widths";
+@import "z-index";

@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #RADIOS/DEFAULT
+   ========================================================================== */
+
+.radios {
+    display: block;
+
+    &__item {
+        display: block;
+        margin-bottom: var(--spacingDefault);
+        position: relative;
+
+        .radios--inline & {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: var(--spacingDefault);
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 0;
+        padding-left: var(--formRadioLabelPaddingLeft);
+
+        font-family: var(--fontFamilyDefault);
+        font-size: var(--fontSizeBase);
+        font-weight: var(--fontWeightDefault);
+
+        cursor: pointer;
+        touch-action: manipulation;
+
+        &:before {
+            border: var(--formFieldBorderWidth) solid
+                var(--formFieldBorderColor);
+            box-sizing: border-box;
+            height: var(--formRadioHeight);
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: var(--formRadioWidth);
+
+            background: var(--formFieldBackgroundColor);
+            border-radius: 50%;
+
+            content: "";
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+                background: var(--formFieldBackgroundColorInverted);
+            }
+        }
+
+        &:after {
+            border: var(--formRadioLabelAfterBorderWidth) solid
+                var(--formFieldBorderColor);
+            height: 0;
+            left: var(--formRadioLabelAfterXPos);
+            position: absolute;
+            top: var(--formRadioLabelAfterYPos);
+            width: 0;
+
+            background: transparent;
+            border-radius: 50%;
+            opacity: 0;
+
+            content: "";
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+            }
+        }
+    }
+
+    &__input {
+        height: var(--formRadioHeight);
+        left: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: var(--formRadioWidth);
+        z-index: var(--zIndexDefault);
+
+        cursor: pointer;
+        opacity: 0;
+
+        /* Make check icon visible */
+        &:checked + .radios__label:after {
+            opacity: 1;
+        }
+
+        /* Change radio border colour when checked, if desired */
+        &:checked + .radios__label:before {
+            border-color: var(--formFieldBorderColor);
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+            }
+        }
+
+        /* Show focus colour */
+        &:focus + .radios__label::before {
+            @extend %focus-form-element;
+        }
+    }
+}

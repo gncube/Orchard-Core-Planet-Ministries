@@ -1,0 +1,206 @@
+/* ==========================================================================
+   #CAROUSEL/DEFAULT
+   ========================================================================== */
+
+@use "sass:math";
+
+/*
+ * 1. Position indicators above the line effect containers.
+ */
+
+.carousel {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel__indicators {
+    bottom: var(--spacingLarge);
+    display: flex;
+    left: 0;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: var(--zIndexFront); /* 1. */
+
+    list-style: none;
+}
+
+.carousel__indicator {
+    height: var(--carouselIndicatorSize);
+    margin-right: var(--spacingDefault);
+    width: var(--carouselIndicatorSize);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.carousel__indicator-button {
+    border: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+
+    background-color: var(--colorCarouselIndicator);
+    border-radius: calc(var(--carouselIndicatorSize) / 2);
+
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        background-color: var(--colorCarouselIndicatorFocus);
+    }
+
+    .is-active & {
+        background-color: var(--colorCarouselIndicatorActive);
+    }
+}
+
+.carousel__prev-next {
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+
+    background: none;
+
+    cursor: pointer;
+    transform: translateX(0) translateY(-50%);
+    transition: transform var(--carouselPagerHoverDuration) ease-in-out,
+        padding var(--carouselPagerHoverDuration) ease-in-out;
+    z-index: var(--zIndexFront); /* 1. */
+
+    svg {
+        display: block;
+        height: var(--carouselPagerNextPrevBtnHeight);
+        width: var(--carouselPagerNextPrevBtnWidth);
+
+        path {
+            fill: var(--carouselPagerBtnFill);
+        }
+    }
+
+    &:focus,
+    &:hover {
+        svg path {
+            fill: var(--colorCarouselIndicatorActive);
+        }
+    }
+}
+
+.carousel__next-btn {
+    right: var(--carouselNavBtnXMobile);
+
+    &:focus,
+    &:hover {
+        padding-left: var(--spacingSmall);
+        transform: translateX(var(--spacingSmall)) translateY(-50%);
+    }
+
+    @include mq($from: tablet) {
+        right: var(--carouselNavBtnX);
+
+        &:focus,
+        &:hover {
+            padding-left: var(--spacingDefault);
+            transform: translateX(var(--spacingDefault)) translateY(-50%);
+        }
+    }
+}
+
+.carousel__previous-btn {
+    left: var(--carouselNavBtnXMobile);
+
+    &:focus,
+    &:hover {
+        padding-right: var(--spacingSmall);
+        transform: translateX(-var(--spacingSmall)) translateY(-50%);
+    }
+
+    @include mq($from: tablet) {
+        left: var(--carouselNavBtnX);
+
+        &:focus,
+        &:hover {
+            padding-right: var(--spacingDefault);
+            transform: translateX(calc(var(--spacingDefault) * -1))
+                translateY(-50%);
+        }
+    }
+}
+
+.carousel__items {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.carousel__track {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    position: relative;
+
+    transition: transform var(--carouselRevealDuration) ease-in-out;
+}
+
+.carousel__item {
+    border-radius: 0;
+    display: block;
+    min-width: 100%;
+    position: relative;
+
+    overflow: hidden;
+
+    &:hover {
+        .carousel__item-background img {
+            transform: var(--carouselItemBackgroundScaleHover);
+        }
+    }
+}
+
+.carousel__item-content {
+    padding: var(--spacingLarge);
+
+    opacity: 0;
+    transform: translateX(-var(--spacingLarge));
+    transition: opacity var(--carouselRevealDuration) ease-in-out,
+        transform var(--carouselRevealDuration) ease-in-out;
+    transition-delay: var(--carouselRevealDuration);
+
+    @include mq($from: tablet) {
+        padding: var(--spacingXLarge);
+    }
+
+    .is-active & {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.carousel__item-background {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: var(--zIndexUnder);
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+        transform: var(--carouselItemBackgroundScale);
+        transition: var(--carouselItemBackgroundTransition);
+    }
+}

@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #COLOURS
+   ========================================================================== */
+
+@use "sass:color";
+
+:root {
+    --colorBlack: #070f26;
+    --colorGrey: #cccccc;
+    --colorGreyLight: #efefef;
+    --colorWhite: #ffffff;
+
+    --colorAlertBackground: var(--colorGreyLight);
+    --colorAlertErrorBackground: #e49393;
+    --colorAlertErrorText: #310606;
+    --colorAlertSuccessBackground: #93e493;
+    --colorAlertSuccessText: #093109;
+
+    --colorCarouselIndicator: #747474;
+    --colorCarouselIndicatorActive: #ffffff;
+    --colorCarouselIndicatorFocus: #c4c4c4;
+
+    --colorError: #e20000;
+
+    --colorPrimary: #3ce854;
+    --colorPrimaryActive: #{color.adjust(#3ce854, $lightness: -10%)};
+    --colorSecondary: #070f26;
+    --colorSecondaryActive: #{color.adjust(#070f26, $lightness: -10%)};
+
+    --colorSiteBackground: var(--colorWhite);
+    --colorTextDefault: var(--colorBlack);
+    --colorTextInverted: var(--colorWhite);
+    --colorTextLight: var(--colorGrey);
+}

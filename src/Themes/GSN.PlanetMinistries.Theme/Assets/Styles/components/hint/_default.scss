@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #HINT/DEFAULT
+   ========================================================================== */
+
+/* Used primarily for forms and providing further context to a fieldset */
+
+.hint {
+    display: block;
+    margin-bottom: var(--spacingDefault);
+
+    color: var(--colorTextLight);
+}

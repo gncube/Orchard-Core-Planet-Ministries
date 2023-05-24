@@ -1,0 +1,41 @@
+{
+    "name": "Studio Site",
+    "displayName": "Studio Site",
+    "description": "Sets up studio site with Planet Ministries",
+    "author": "Thomas Laker Ltd.",
+    "website": "https://geraldncube.co.uk",
+    "version": "1.5.1",
+    "issetuprecipe": true,
+    "categories": ["studio"],
+    "tags": ["studio"],
+    "variables": {
+        "now": "[js: new Date().toISOString()]"
+    },
+    "steps": [
+        {
+            "name": "recipes",
+            "Values": [
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Studio-FeaturesAndSettings"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Studio-ContentDefinitions"
+                },
+                {
+                    "executionid": "Etch.OrchardCore.Widgets",
+                    "name": "Widgets-ContentDefinitions"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Studio-ContentAndMedia"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Studio-QueriesAndIndexes"
+                }
+            ]
+        }
+    ]
+}

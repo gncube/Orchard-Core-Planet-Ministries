@@ -1,0 +1,107 @@
+/* ==========================================================================
+   #CHECKBOXES/DEFAULT
+   ========================================================================== */
+
+.checkboxes {
+    display: block;
+
+    &__item {
+        display: block;
+        margin-bottom: var(--spacingDefault);
+        position: relative;
+
+        .checkboxes--inline & {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: var(--spacingDefault);
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 0;
+        padding-left: var(--formCheckboxLabelPaddingLeft);
+
+        font-family: var(--fontFamilyDefault);
+        font-size: var(--fontSizeBase);
+        font-weight: var(--fontWeightDefault);
+
+        cursor: pointer;
+        touch-action: manipulation;
+
+        &:before {
+            border: var(--formFieldBorderWidth) solid
+                var(--formFieldBorderColor);
+            box-sizing: border-box;
+            height: var(--formCheckboxHeight);
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: var(--formCheckboxWidth);
+
+            background: var(--formFieldBackgroundColor);
+
+            content: "";
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+                background: var(--formFieldBackgroundColorInverted);
+            }
+        }
+
+        &:after {
+            border-width: var(--formCheckboxLabelAfterBorderWidth);
+            border: solid;
+
+            height: var(--formCheckboxLabelAfterHeight);
+            left: var(--formCheckboxLabelAfterXPos);
+            position: absolute;
+            top: var(--formCheckboxLabelAfterYPos);
+            width: var(--formCheckboxLabelAfterWidth);
+
+            background: transparent;
+            border-color: var(--formFieldBorderColor);
+
+            transform: rotate(-45deg);
+            opacity: 0;
+
+            content: "";
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+            }
+        }
+    }
+
+    &__input {
+        height: var(--formCheckboxHeight);
+        left: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: var(--formCheckboxWidth);
+        z-index: var(--zIndexDefault);
+
+        cursor: pointer;
+        opacity: 0;
+
+        /* Make check icon visible */
+        &:checked + .checkboxes__label:after {
+            opacity: 1;
+        }
+
+        /* Change checkbox border colour when checked, if desired */
+        &:checked + .checkboxes__label:before {
+            border-color: var(--formFieldBorderColor);
+
+            .inverted & {
+                border-color: var(--formFieldBorderColorInverted);
+            }
+        }
+
+        /* Show focus colour */
+        &:focus + .checkboxes__label::before {
+            @extend %focus-form-element;
+        }
+    }
+}

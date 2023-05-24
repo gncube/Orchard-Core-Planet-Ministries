@@ -1,0 +1,20 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+/*
+ * Control dimensions & spacing, favouring `rem` unit.
+ */
+
+:root {
+    --spacingSmall: 0.8rem;
+    --spacingDefault: 1.6rem;
+    --spacingLarge: 3.2rem;
+    --spacingXLarge: 5.4rem;
+
+    --spacingText: 1.6rem;
+
+    @include mq($from: mobileLarge) {
+        --spacingText: 2.4rem;
+    }
+}

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   #FORM/DEFAULT
+   ========================================================================== */
+
+.form {
+    &--centered {
+        .btn {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &--horizontal {
+        display: flex;
+
+        > * {
+            margin-right: var(--spacingDefault);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

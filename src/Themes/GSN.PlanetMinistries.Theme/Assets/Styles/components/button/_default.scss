@@ -1,0 +1,52 @@
+/* ==========================================================================
+   #BUTTON/DEFAULT
+   ========================================================================== */
+
+.btn,
+.btn:link,
+.btn:visited {
+    border: var(--buttonBorderThickness) solid var(--colorBlack);
+    border-radius: var(--buttonBorderRadius);
+    display: inline-block;
+    overflow: hidden;
+    padding: var(--buttonPaddingVertical) var(--buttonPaddingHorizontal);
+    position: relative;
+    vertical-align: middle;
+
+    background-color: var(--colorBlack);
+    outline: none;
+
+    color: var(--colorWhite);
+    font-size: var(--buttonFontSize);
+    font-weight: var(--buttonFontWeight);
+    line-height: var(--buttonLineHeight);
+    text-decoration: none;
+    text-transform: var(--buttonTextTransform);
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--colorWhite);
+        border-color: var(--colorWhite);
+
+        color: var(--colorBlack);
+    }
+
+    &:disabled,
+    &[disabled] {
+        background-color: var(--colorBlack);
+        border-color: var(--colorBlack);
+
+        color: var(--colorWhite);
+
+        cursor: not-allowed;
+        opacity: var(--buttonDisabledOpacity);
+
+        &:hover {
+            background-color: var(--colorBlack);
+            border-color: var(--colorBlack);
+
+            color: var(--colorWhite);
+        }
+    }
+}

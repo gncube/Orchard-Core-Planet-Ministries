@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #FIGURE
+   ========================================================================== */
+
+figure {
+    position: relative;
+    margin: 0 0 var(--spacingDefault) 0;
+
+    img,
+    picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figcaption {
+        padding-top: var(--spacingSmall);
+
+        font-style: italic;
+        text-align: center;
+    }
+}

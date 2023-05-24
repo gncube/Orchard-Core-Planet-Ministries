@@ -1,0 +1,220 @@
+{
+    "name": "Basic-ContentDefinitions",
+    "displayName": "Basic Content Definitions",
+    "description": "Configures content definitions for basic site.",
+    "author": "Thomas Laker Ltd.",
+    "website": "https://geraldncube.co.uk",
+    "version": "1.5.1",
+    "issetuprecipe": false,
+    "categories": ["basic"],
+    "tags": ["basic"],
+    "steps": [
+        {
+            "name": "ContentDefinition",
+            "ContentTypes": [
+                {
+                    "Name": "Page",
+                    "DisplayName": "Page",
+                    "Settings": {
+                        "ContentTypeSettings": {
+                            "Creatable": true,
+                            "Listable": true,
+                            "Draftable": true,
+                            "Versionable": true,
+                            "Securable": true
+                        },
+                        "FullTextAspectSettings": {}
+                    },
+                    "ContentTypePartDefinitionRecords": [
+                        {
+                            "PartName": "Page",
+                            "Name": "Page",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "3"
+                                }
+                            }
+                        },
+                        {
+                            "PartName": "AliasPart",
+                            "Name": "AliasPart",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "1"
+                                }
+                            }
+                        },
+                        {
+                            "PartName": "AutoroutePart",
+                            "Name": "AutoroutePart",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "2"
+                                },
+                                "AutoroutePartSettings": {
+                                    "AllowCustomPath": true,
+                                    "Pattern": "{{ ContentItem | display_text | slugify }}",
+                                    "AllowUpdatePath": false,
+                                    "ShowHomepageOption": true
+                                },
+                                "ContentIndexSettings": {}
+                            }
+                        },
+                        {
+                            "PartName": "TitlePart",
+                            "Name": "TitlePart",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "0"
+                                }
+                            }
+                        },
+                        {
+                            "PartName": "FlowPart",
+                            "Name": "Content",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "DisplayName": "Content",
+                                    "Description": "Content for page.",
+                                    "Position": "4"
+                                },
+                                "LinkableContentTypes": [],
+                                "FlowPartSettings": {
+                                    "ContainedContentTypes": []
+                                },
+                                "ContentIndexSettings": {}
+                            }
+                        },
+                        {
+                            "PartName": "MetaTagsPart",
+                            "Name": "MetaTagsPart",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "5"
+                                }
+                            }
+                        },
+                        {
+                            "PartName": "PublishLaterPart",
+                            "Name": "PublishLaterPart",
+                            "Settings": {
+                                "ContentTypePartSettings": {
+                                    "Position": "7"
+                                }
+                            }
+                        },
+                        {
+                            "PartName": "SitemapPart",
+                            "Name": "SitemapPart",
+                            "Settings": {}
+                        }
+                    ]
+                },
+                {
+                    "Name": "Select",
+                    "DisplayName": "Select",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Drop down list for selecting from collection of options.",
+                        "Icon": "clipboard-list"
+                    }
+                },
+                {
+                    "Name": "Button",
+                    "DisplayName": "Button",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Control used to submit form.",
+                        "Icon": "paper-plane"
+                    }
+                },
+                {
+                    "Name": "TextArea",
+                    "DisplayName": "Text Area",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Multi-line plain-text editing control.",
+                        "Icon": "edit"
+                    }
+                },
+                {
+                    "Name": "Input",
+                    "DisplayName": "Input",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Interactive control used to enter information (text, checkbox, radio, etc...).",
+                        "Icon": "edit"
+                    }
+                },
+                {
+                    "Name": "Label",
+                    "DisplayName": "Label",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Display text to describe meaning of form field.",
+                        "Icon": "tag"
+                    }
+                },
+                {
+                    "Name": "Form",
+                    "DisplayName": "Form",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Collection of fields for collecting information.",
+                        "Icon": "wpforms"
+                    }
+                },
+                {
+                    "Name": "ValidationSummary",
+                    "DisplayName": "Validation Summary",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Display a summary of form validation issues",
+                        "Icon": "exclamation-triangle"
+                    }
+                },
+                {
+                    "Name": "Validation",
+                    "DisplayName": "Validation",
+                    "Settings": {
+                        "Category": "Form",
+                        "Description": "Display a validation issue for specific field.",
+                        "Icon": "exclamation-triangle"
+                    }
+                }
+            ],
+            "ContentParts": [
+                {
+                    "Name": "Page",
+                    "Settings": {},
+                    "ContentPartFieldDefinitionRecords": [
+                        {
+                            "FieldName": "BooleanField",
+                            "Name": "DisplayTitle",
+                            "Settings": {
+                                "ContentPartFieldSettings": {
+                                    "DisplayName": "Display Title"
+                                },
+                                "BooleanFieldSettings": {
+                                    "Hint": "If checked, the title will be rendered at top of the page.",
+                                    "Label": "Display Title"
+                                },
+                                "ContentIndexSettings": {}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Name": "PublishLaterPart",
+                    "Settings": {
+                        "ContentPartSettings": {
+                            "Attachable": true,
+                            "Description": "Adds the ability to schedule content items to be published at a given future date and time."
+                        }
+                    },
+                    "ContentPartFieldDefinitionRecords": []
+                }
+            ]
+        }
+    ]
+}

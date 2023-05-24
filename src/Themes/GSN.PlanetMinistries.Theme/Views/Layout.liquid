@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ Culture.Name }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% render_section "HeadMeta", required: false %}
+        <title>{% page_title "", position: "after", separator: "" %}</title>
+        {% resources type: "Meta" %}
+        
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/manuale-v8-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/manuale-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/manuale-v8-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/manuale-v8-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/work-sans-v9-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/work-sans-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/work-sans-v9-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+        <link rel="preload" href="/GSN.PlanetMinistries.Theme/css/work-sans-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+		{% style src:"/GSN.PlanetMinistries.Theme/css/styles.css", append_version:"true" %}
+		{% script src:"/GSN.PlanetMinistries.Theme/scripts/index.js", append_version:"true", async: "true" %}
+
+        {% resources type: "HeadLink" %}
+        {% resources type: "Stylesheet" %}
+        {% resources type: "HeadScript" %}
+    </head>
+    <body class="animate">
+        {% render_section "Header", required: false %}
+
+        <main>
+            {% render_section "BeforeContent" %}
+            {% render_section "Content" %}
+            {% render_section "AfterContent" %}
+        </main>
+
+        {% render_section "Footer", required: false %}
+
+        {% resources type: "FootScript" %}
+    </body>
+</html>

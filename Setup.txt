@@ -1,1 +1,4 @@
 dotnet new occms -n PlanetMinistriesCMS -o src/PlanetMinistriesCMS -lo serilog
+
+cd to Themes folder
+dotnet new orchardcore-themeboilerplate -n GSN.PlanetMinistries.Theme -o GSN.PlanetMinistries.Theme -au "Thomas Laker Ltd." --description "Description for your theme" -t "Planet Ministries" -w "https://geraldncube.co.uk"

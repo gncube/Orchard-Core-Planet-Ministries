@@ -1,0 +1,143 @@
+/* ==========================================================================
+   #HEADER/DEFAULT
+   ========================================================================== */
+
+/*
+ * 1. Prevents navigation submenus from appearing below any other z-indexed
+ *    components.
+ */
+
+.header {
+    position: relative; /* 1. */
+    z-index: var(--zIndexFront); /* 1. */
+
+    background-color: var(--headerBackgroundColor);
+    background-image: var(--headerBackgroundPattern);
+    background-repeat: repeat;
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        height: var(--headerContentHeight);
+    }
+
+    &__logo {
+        max-width: var(--headerLogoMaxWidth);
+        margin-right: auto;
+        position: relative;
+        width: 100%;
+        z-index: var(--zIndexFront);
+
+        img {
+            display: block;
+            max-height: var(--headerLogoMaxHeight);
+        }
+    }
+
+    &__nav-button {
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        z-index: var(--zIndexFront);
+
+        background-color: transparent;
+        border: 0;
+
+        @include mq($from: tablet) {
+            display: none;
+        }
+
+        &:after {
+            bottom: -var(--headerNavButtonAfterOffset);
+            content: "";
+            left: -var(--headerNavButtonAfterOffset);
+            right: -var(--headerNavButtonAfterOffset);
+            top: -var(--headerNavButtonAfterOffset);
+            position: absolute;
+        }
+
+        &:before {
+            content: "";
+            height: var(--headerNavButtonHeight);
+            margin-right: var(--headerNavButtonMarginRight);
+            width: var(--headerNavButtonWidth);
+
+            background-image: url("../content/icon-menu.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        &--close {
+            display: none;
+
+            &:before {
+                background-image: url("../content/icon-close.svg");
+            }
+        }
+
+        .inverted & {
+            color: var(--colorTextInverted);
+
+            &:before {
+                background-image: url("../content/icon-menu-white.svg");
+            }
+
+            &--close {
+                &:before {
+                    background-image: url("../content/icon-close-white.svg");
+                }
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: var(--zIndexDefault);
+
+        background-color: var(--headerMobileBackgroundColor);
+        background-image: var(--headerMobileBackgroundPattern);
+        border-top-color: var(--colorWhite);
+        border-top-style: solid;
+        border-top-width: var(--headerNavPaddingTop);
+
+        @include mq($from: tablet) {
+            border-top: 0;
+            display: flex;
+            height: auto;
+            padding-top: 0;
+            position: static;
+            width: auto;
+
+            background-color: transparent;
+            background-image: none;
+        }
+
+        .inverted & {
+            border-top-color: var(--headerBackgroundColor);
+
+            color: var(--colorTextInverted);
+        }
+    }
+}
+
+.is-nav-visible {
+    .header__nav {
+        display: block;
+    }
+
+    .header__nav-button {
+        display: none;
+
+        &--close {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   #FOCUS FORM ELEMENT
+   ========================================================================== */
+
+/*
+ * For adding :focus styling to elements.
+ */
+
+%focus-form-element {
+    border: var(--formFieldBorderWidth) solid var(--colorTextDefault);
+    box-shadow: 0 0 var(--formFieldFocusBoxShadowBlur)
+        var(--formFieldFocusBoxShadowSpread) var(--colorPrimary);
+}

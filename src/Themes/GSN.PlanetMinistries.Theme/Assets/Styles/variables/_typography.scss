@@ -1,0 +1,59 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+:root {
+    --fontFamilyDefault: 'Work Sans', sans-serif;
+    --fontFamilyHeading: 'Manuale', sans-serif;
+    --fontSizeBase: 1.6rem;
+    --fontSizeBaseEm: 1.6em;
+    --fontSizeHero: var(--fontSizeH1);
+    --fontSizeH1: calc(var(--fontSizeBase) * 3); // 48
+    --fontSizeH2: calc(var(--fontSizeBase) * 2); // 32
+    --fontSizeH3: calc(var(--fontSizeBase) * 1.5); // 24
+    --fontSizeH4: var(--fontSizeLarge);
+    --fontSizeH5: var(--fontSizeBase);
+    --fontSizeH6: var(--fontSizeSmall);
+    --fontSizeLarge: calc(var(--fontSizeBase) * 1.125); // 18
+    --fontSizeSmall: calc(var(--fontSizeBase) * 0.875); // 14
+    --fontStyleDefault: normal;
+    --fontStyleH1: var(--fontStyleDefault);
+    --fontStyleH2: var(--fontStyleDefault);
+    --fontStyleH3: var(--fontStyleDefault);
+    --fontStyleH4: var(--fontStyleDefault);
+    --fontStyleH5: var(--fontStyleDefault);
+    --fontStyleH6: var(--fontStyleDefault);
+    --fontWeightBold: 700;
+    --fontWeightDefault: 400;
+    --fontWeightH1: var(--fontWeightBold);
+    --fontWeightH2: var(--fontWeightBold);
+    --fontWeightH3: var(--fontWeightBold);
+    --fontWeightH4: var(--fontWeightBold);
+    --fontWeightH5: var(--fontWeightBold);
+    --fontWeightH6: var(--fontWeightBold);
+    --lineHeightDefault: 1.5;
+    --lineHeightHeading: 1.2;
+    --lineHeightHero: 1.4;
+    --lineHeightH1: var(--lineHeightHeading);
+    --lineHeightH2: var(--lineHeightHeading);
+    --lineHeightH3: var(--lineHeightHeading);
+    --lineHeightH4: var(--lineHeightHeading);
+    --lineHeightH5: var(--lineHeightHeading);
+    --lineHeightH6: var(--lineHeightHeading);
+    --textTransformH1: none;
+    --textTransformH2: none;
+    --textTransformH3: none;
+    --textTransformH4: none;
+    --textTransformH5: none;
+    --textTransformH6: none;
+
+    @include mq($from: desktopSmall) {
+        --fontSizeBase: 1.8rem;
+        --fontSizeBaseEm: 1.8em;
+        --fontSizeH1: calc(var(--fontSizeBase) * 2.666); // 48
+        --fontSizeH2: calc(var(--fontSizeBase) * 1.777); // 32
+        --fontSizeH3: calc(var(--fontSizeBase) * 1.333); // 24
+        --fontSizeLarge: calc(var(--fontSizeBase) * 1.111); // 20
+        --fontSizeSmall: calc(var(--fontSizeBase) * 0.888); // 16
+    }
+}

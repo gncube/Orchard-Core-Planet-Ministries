@@ -1,0 +1,91 @@
+/* ==========================================================================
+   #FLOW/DEFAULT
+   ========================================================================== */
+
+/* 
+ * 1. For when content is directly added without a section. Ensures
+ *    non-full-width content (e.g paragraph) does not touch sides of viewport.
+ * 2. Breakout behaviour for full width elements, to ensure they do touch sides
+ * 3. Resets the above 'breakout behaviour' if inside a section. So you can put
+ *    a hero or carousel inside a section and have it respect layout width, if
+ *    desired.
+ */
+
+.flow {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--contentWidth);
+    width: 100%;
+
+    /* 1 */
+    article > &,
+    main > & {
+        padding-left: var(--gutterSmall);
+        padding-right: var(--gutterSmall);
+
+        @include mq($from: mobile) {
+            padding-left: var(--gutter);
+            padding-right: var(--gutter);
+        }
+
+        @include mq($from: desktop) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /* 2 */
+    .width--100 {
+        > .carousel,
+        > .hero,
+        > .image--responsive,
+        > .section {
+            left: 50%;
+            margin-left: calc(-50vw + (var(--scrollbarWidth) / 2));
+            margin-right: calc(-50vw + (var(--scrollbarWidth) / 2));
+            position: relative;
+            right: 50%;
+            width: calc(100vw - var(--scrollbarWidth));
+
+            .flow {
+                max-width: none;
+            }
+        }
+
+        /* 3 */
+        .section {
+            .carousel,
+            .hero,
+            .image--responsive {
+                left: auto;
+                margin-left: 0;
+                margin-right: 0;
+                right: auto;
+                width: auto;
+            }
+        }
+    }
+
+    .constrain & {
+        max-width: var(--contentWidth);
+    }
+
+    .constrain--wide & {
+        max-width: var(--contentWidthWide);
+    }
+
+    .constrain--full & {
+        max-width: 100%;
+    }
+}
+
+.flow__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: calc(var(--flowGutter) * -1);
+
+    > * {
+        padding: 0 0 0 var(--flowGutter);
+    }
+}

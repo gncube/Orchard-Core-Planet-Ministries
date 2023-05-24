@@ -1,0 +1,101 @@
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+
+/*
+ * Classes to style text in various different ways.
+ */
+
+.font {
+    &--default {
+        font-family: var(--fontFamilyDefault);
+    }
+
+    &--heading {
+        font-family: var(--fontFamilyHeading);
+    }
+}
+
+.text {
+    &--align {
+        &-left {
+            text-align: left;
+        }
+
+        &-center {
+            text-align: center;
+        }
+
+        &-right {
+            text-align: right;
+        }
+    }
+
+    &--h1 {
+        @include text-heading(H1);
+    }
+
+    &--h2 {
+        @include text-heading(H2);
+    }
+
+    &--h3 {
+        @include text-heading(H3);
+    }
+
+    &--h4 {
+        @include text-heading(H4);
+    }
+
+    &--h5 {
+        @include text-heading(H5);
+    }
+
+    &--h6 {
+        @include text-heading(H6);
+    }
+
+    &--line-through {
+        text-decoration: line-through;
+    }
+
+    &--underline {
+        text-decoration: underline;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--size {
+        &-h1 {
+            font-size: var(--fontSizeH1);
+            line-height: var(--lineHeightHeading);
+        }
+
+        &-h2 {
+            font-size: var(--fontSizeH2);
+            line-height: var(--lineHeightHeading);
+        }
+
+        &-h3 {
+            font-size: var(--fontSizeH3);
+            line-height: var(--lineHeightHeading);
+        }
+
+        &-h4 {
+            font-size: var(--fontSizeH4);
+            line-height: var(--lineHeightHeading);
+        }
+    }
+
+    &--weight {
+        &-bold {
+            font-weight: var(--fontWeightBold);
+        }
+
+        &-normal {
+            font-weight: var(--fontWeightDefault);
+        }
+    }
+}

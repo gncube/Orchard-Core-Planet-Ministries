@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #CARD/VARIABLES
+   ========================================================================== */
+
+:root {
+    --cardBackground: #eaeaea;
+    --cardBackgroundPattern: none;
+    --cardBodyZIndex: var(--zIndexMid);
+    --cardBorder: var(--colorGrey);
+    --cardBorderRadius: var(--borderRadius);
+    --cardBodyPadding: 2.4rem;
+    --cardMediaBorder: none;
+    --cardMediaMarginBottom: 0;
+    --cardMetaWeight: 700;
+    --cardMetaTextTransform: uppercase;
+    --cardTextColor: inherit;
+    --cardTitleMarginBottom: 0.2rem;
+    --cardMediaImageOverlayScaleHover: 1.03;
+    --cardMediaImageScale: 1;
+    --cardMediaImageScaleHover: 1.01;
+    --cardMediaImageTransitionDuration: var(--animationDuration);
+    --cardMediaImageTransitionEasing: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

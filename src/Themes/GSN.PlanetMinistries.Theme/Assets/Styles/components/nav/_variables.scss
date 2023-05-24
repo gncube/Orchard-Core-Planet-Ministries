@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #NAV/VARIABLES
+   ========================================================================== */
+
+:root {
+    --navChevronHeight: 0.6rem;
+    --navChevronMarginBottom: 0.4rem;
+    --navChevronMarginLeft: 0.5rem;
+    --navChevronWidth: 1rem;
+
+    --navAnchorPaddingBottom: 1.5rem;
+    --navAnchorPaddingTablet: 0.5rem 1rem;
+    --navAnchorPaddingTop: 1.5rem;
+
+    --navBorderWidth: var(--borderWidth);
+    --navBorderColor: #d7d7d7;
+    --navBorderColorLight: #eaeaea;
+    --navColor: var(--colorTextDefault);
+    --navColorActive: var(--colorPrimary);
+    --navColorInverted: var(--colorTextInverted);
+    --navColorInvertedActive: var(--colorPrimary);
+    --navFontSize: var(--fontSizeBase);
+    --navFontWeight: normal;
+    --navFooterFontWeight: normal;
+    --navFooterTextTransform: initial;
+    --navPrimaryAnchorPaddingDesktop: 1rem 2rem;
+    --navTextDecorationHover: none;
+    --navTextTransform: none;
+}

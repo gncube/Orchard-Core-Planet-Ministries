@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+
+input {
+    border: var(--formFieldBorderWidth) solid var(--formFieldBorderColor);
+    display: block;
+    padding: var(--formFieldPaddingVertical) var(--formFieldPaddingHorizontal);
+    width: 100%;
+
+    background-color: var(--formFieldBackgroundColor);
+    outline: none;
+
+    text-indent: 0;
+    color: var(--formFieldTextColor);
+
+    .inverted & {
+        border-color: var(--formFieldBorderColorInverted);
+        background-color: var(--formFieldBackgroundColorInverted);
+        color: var(--formFieldTextColorInverted);
+    }
+
+    &:focus {
+        @extend %focus-form-element;
+    }
+
+    &[type="file"] {
+        border: 0;
+    }
+}

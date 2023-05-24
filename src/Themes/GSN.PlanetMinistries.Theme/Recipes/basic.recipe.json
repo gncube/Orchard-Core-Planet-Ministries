@@ -1,0 +1,41 @@
+{
+    "name": "Basic Site",
+    "displayName": "Basic Site",
+    "description": "Sets up basic site with boilerplate theme",
+    "author": "Thomas Laker Ltd.",
+    "website": "https://geraldncube.co.uk",
+    "version": "1.5.1",
+    "issetuprecipe": true,
+    "categories": ["basic"],
+    "tags": ["basic"],
+    "variables": {
+        "now": "[js: new Date().toISOString()]"
+    },
+    "steps": [
+        {
+            "name": "recipes",
+            "Values": [
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Basic-FeaturesAndSettings"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Basic-ContentDefinitions"
+                },
+                {
+                    "executionid": "Etch.OrchardCore.Widgets",
+                    "name": "Widgets-ContentDefinitions"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Basic-ContentAndMedia"
+                },
+                {
+                    "executionid": "GSN.PlanetMinistries.Theme",
+                    "name": "Basic-QueriesAndIndexes"
+                }
+            ]
+        }
+    ]
+}

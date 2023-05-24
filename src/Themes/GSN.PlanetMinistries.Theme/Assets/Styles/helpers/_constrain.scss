@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #CONSTRAIN
+   ========================================================================== */
+
+/*
+ * Helper classes for restricted width of a container.
+ */
+
+.constrain {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--contentWidth);
+    padding-left: var(--gutterSmall);
+    padding-right: var(--gutterSmall);
+    width: 100%;
+
+    @include mq($from: mobile) {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+
+.constrain--extra-thin {
+    max-width: var(--contentWidthExtraThin);
+}
+
+.constrain--thin {
+    max-width: var(--contentWidthThin);
+}
+
+.constrain--wide {
+    max-width: var(--contentWidthWide);
+}
+
+.constrain--full-with-gutter {
+    max-width: 100%;
+}
+
+.constrain--full {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #BUTTON/PRIMARY
+   ========================================================================== */
+
+.btn--primary,
+.btn--primary:link,
+.btn--primary:visited {
+    background-color: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+
+    color: var(--colorWhite);
+
+    &:hover {
+        background-color: var(--colorPrimaryActive);
+        border-color: var(--colorPrimaryActive);
+    }
+
+    &:disabled,
+    &[disabled] {
+        background-color: var(--colorPrimary);
+        border-color: var(--colorPrimary);
+
+        color: var(--colorWhite);
+
+        &:hover {
+            background-color: var(--colorPrimary);
+            border-color: var(--colorPrimary);
+
+            color: var(--colorWhite);
+        }
+    }
+}

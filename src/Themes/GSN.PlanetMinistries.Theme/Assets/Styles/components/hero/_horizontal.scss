@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #HERO/HORIZONTAL
+   ========================================================================== */
+
+@use 'sass:math';
+
+.hero--horizontal-center {
+    @each $width in $widths {
+        .width--#{math.floor($width)} {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.hero--horizontal-left {
+    @each $width in $widths {
+        .width--#{math.floor($width)} {
+            margin-right: auto;
+        }
+    }
+}
+
+.hero--horizontal-right {
+    @each $width in $widths {
+        .width--#{math.floor($width)} {
+            margin-left: auto;
+        }
+    }
+}

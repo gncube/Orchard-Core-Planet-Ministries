@@ -1,0 +1,19 @@
+{
+    "BooleanField": [
+        {
+            "contentType": ["Page"],
+            "place": "-"
+        }
+    ],
+    "ResponsiveMediaField": [
+        {
+            "contentType": ["SectionFeatured"],
+            "place": "Background"
+        },
+        {
+            "contentType": ["CarouselItem"],
+            "displayType": "Detail",
+            "place": "Background"
+        }
+    ]
+}

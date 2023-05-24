@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #HERO/GRADIENT
+   ========================================================================== */
+
+.hero--with-media-gradient {
+    .hero__media,
+    .hero-responsive-media--background-image {
+        &:before {
+            content: " ";
+            height: var(--heroGradientHeight);
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            background: rgba(0, 0, 0, var(--heroGradientOpacity));
+
+            z-index: var(--zIndexMid);
+
+            @include mq($from: desktopSmall) {
+                background: linear-gradient(
+                    180deg,
+                    rgba(0, 0, 0, 0) var(--heroGradientDefaultStop),
+                    rgba(0, 0, 0, var(--heroGradientOpacity)) 100%
+                );
+            }
+        }
+    }
+
+    &.hero--horizontal-left {
+        .hero__media,
+        .hero-responsive-media--background-image {
+            &:before {
+                @include mq($from: desktopSmall) {
+                    background: linear-gradient(
+                        90deg,
+                        rgba(0, 0, 0, var(--heroGradientOpacity)) 0%,
+                        rgba(0, 0, 0, 0) var(--heroGradientDefaultStop)
+                    );
+                }
+            }
+        }
+    }
+
+    &.hero--horizontal-right {
+        .hero__media,
+        .hero-responsive-media--background-image {
+            &:before {
+                @include mq($from: desktopSmall) {
+                    background: linear-gradient(
+                        -90deg,
+                        rgba(0, 0, 0, var(--heroGradientOpacity)) 0%,
+                        rgba(0, 0, 0, 0) var(--heroGradientDefaultStop)
+                    );
+                }
+            }
+        }
+    }
+
+    &.hero--horizontal-center {
+        &.hero--vertical-bottom {
+            .hero__media,
+            .hero-responsive-media--background-image {
+                &:before {
+                    @include mq($from: desktopSmall) {
+                        background: linear-gradient(
+                            180deg,
+                            rgba(0, 0, 0, 0) var(--heroGradientDefaultStop),
+                            rgba(0, 0, 0, var(--heroGradientOpacity)) 100%
+                        );
+                    }
+                }
+            }
+        }
+
+        &.hero--vertical-center {
+            .hero__media,
+            .hero-responsive-media--background-image {
+                &:before {
+                    @include mq($from: desktopSmall) {
+                        background: radial-gradient(
+                            circle,
+                            rgba(0, 0, 0, var(--heroGradientOpacity)) 0%,
+                            rgba(0, 0, 0, 0) var(--heroGradientDefaultStop),
+                            rgba(0, 0, 0, 0) 100%
+                        );
+                    }
+                }
+            }
+        }
+
+        &.hero--vertical-top {
+            .hero__media,
+            .hero-responsive-media--background-image {
+                &:before {
+                    background: linear-gradient(
+                        0deg,
+                        rgba(0, 0, 0, 0) var(--heroGradientDefaultStop),
+                        rgba(0, 0, 0, var(--heroGradientOpacity)) 100%
+                    );
+                }
+            }
+        }
+    }
+}

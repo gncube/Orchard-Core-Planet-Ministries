@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #LIST RESET
+   ========================================================================== */
+
+/*
+ * For resetting default list styles, useful for e.g navigation and unstyled
+ * list components
+ */
+
+.list-reset {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+
+    list-style: none;
+}

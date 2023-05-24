@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #TEXT HEADING
+   ========================================================================== */
+
+/*
+ * For setting text styles to match a specific heading level
+ */
+
+@mixin text-heading($size) {
+    font-family: var(--fontFamilyHeading);
+    font-style: var(--fontStyle#{$size});
+    font-size: var(--fontSize#{$size});
+    font-weight: var(--fontWeight#{$size});
+    line-height: var(--lineHeight#{$size});
+    text-transform: var(--textTransform#{$size});
+}
